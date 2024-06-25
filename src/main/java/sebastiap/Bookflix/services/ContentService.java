@@ -44,4 +44,15 @@ public class ContentService {
     public Content saveContent(Content newContent){
         return contRepo.save(newContent);
     }
+    public void deleteContent(Integer id){
+        contRepo.deleteById(id);
+    }
+
+    public Content updateContent (Integer id,Content newContent) {
+        Optional<Content> oldContent = contRepo.findById(id);
+        if (oldContent.isPresent()) {
+            contRepo.save(newContent);
+        }
+        return newContent;
+    }
 }

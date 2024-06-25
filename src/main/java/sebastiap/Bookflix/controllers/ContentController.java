@@ -70,5 +70,25 @@ public class ContentController {
         setContent(newContent,request);
         return new ResponseEntity<Content>(contServ.saveContent(newContent), HttpStatus.OK);
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Integer> deleteContent(@PathVariable Integer id){
+        contServ.deleteContent(id);
+        ResponseEntity response = new ResponseEntity<>(HttpStatus.OK);
+        return response;
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Integer> updateBook(@PathVariable Integer id,@RequestBody ContentController.contentRequest request){
+        Content updatedContent = new Content();
+        setContent(updatedContent,request);
+        contServ.updateContent(id,updatedContent);
+        System.out.println("Che, algo hice aca ${id}" + id);
+        if (id.equals(null) || id.describeConstable().isEmpty()){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        ResponseEntity response = new ResponseEntity<>(HttpStatus.OK);
+        return response;
+
+    }
 
 }
