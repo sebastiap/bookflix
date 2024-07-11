@@ -12,6 +12,6 @@ import java.util.Optional;
 public interface ContentRepository extends JpaRepository<Content,Integer> {
 
     public List<Content> findByAuthor(String author);
-
+    public List<Content> findByBook(Integer book);
     public Optional<Content> findByTitle(String title);
 }

@@ -35,8 +35,11 @@ public class ContentService {
 
     public List<Content> findContentByAuthor(String author){
         return contRepo.findByAuthor(author);
-
     }
+    public List<Content> findContentByBook(Integer book){
+        return contRepo.findByBook(book);
+    }
+
     public Optional<Content> findContentByTitle(String title){
         return contRepo.findByTitle(title);
 

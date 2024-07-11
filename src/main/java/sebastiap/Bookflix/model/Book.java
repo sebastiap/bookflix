@@ -75,7 +75,7 @@ INSERT INTO CONTENT_TYPE VALUES (6,'Otro','Otro tipo de lectura.');
 INSERT INTO BOOK VALUES (1,'Cuentos de la Selva','Horacio Quiroga',1,'Kapeluz/Norma',1,NULL,1,'CASA');
 INSERT INTO BOOK VALUES (2,'Cuentos de Ultratumba','Edgar Allan Poe',1,1,NULL,1,1);
 INSERT INTO BOOK VALUES (3,'Cuentos de miedo para asustarse de veras','Varios',1,1,NULL,1,1);
-
+INSERT INTO BOOK VALUES (5,'La mejor luna','Liliana Bodoc','Norma',1,NULL,1,'CASA');
     CREATE TABLE CONTENT(
             ID INT PRIMARY KEY     NOT NULL,
             TITLE           TEXT    NOT NULL,
@@ -100,6 +100,7 @@ INSERT INTO CONTENT VALUES (11,'La mujer del moñito','Angela Sommer-Bodengburg'
 INSERT INTO CONTENT VALUES (12,'Barbara','María Teresa Andruetto', 2,'Terror',9,3);
 INSERT INTO CONTENT VALUES (13,'Flores contra la muerte','Ana Maria Shua', 2,'Terror',9,3);
 INSERT INTO CONTENT VALUES (14,'Gato','Laura No', 2,'Terror',9,3);
+INSERT INTO CONTENT VALUES (15,'La mejor luna','Liliana Bodoc', 2,'Terror',9,5);
 
 
 

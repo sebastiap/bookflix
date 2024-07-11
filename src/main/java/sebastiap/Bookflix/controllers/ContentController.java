@@ -57,6 +57,10 @@ public class ContentController {
     public List<Content> getBookContentByAuthor(@PathVariable String author){
         return contServ.findContentByAuthor(author);
     };
+    @GetMapping("/book/{book}")
+    public List<Content> getBookContentByBook(@PathVariable Integer book){
+        return contServ.findContentByBook(book);
+    };
 
     //OJO con este cuando un cuento este en mas de un libro
     @GetMapping("/title/{title}")
