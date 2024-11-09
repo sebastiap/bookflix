@@ -20,6 +20,9 @@ public class BookService {
         return repo.findByTitle(Title);
     }
     public List<Book> allBooks(){
+
+        List<Book> algo = repo.findAll();
+        System.out.println(algo);
         return repo.findAll();
 
 

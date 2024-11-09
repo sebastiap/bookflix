@@ -24,13 +24,15 @@ public class Book {
     private String title;
     @Column(name = "author")
     private String author;
-    //private Integer type;
-    //@Column(name = "CONTENT")
-    //private Integer contentId;
+    @Column(name = "editorial")
     private String editorial;
+    @Column(name = "colections")
     private Integer colections;
+    @Column(name = "genres")
     private Integer genres;
+    @Column(name = "themes")
     private Integer themes;
+    @Column(name = "location")
     private String location;
 
 /*
@@ -49,6 +51,8 @@ CREATE TABLE COLECTION (
             TITLE           TEXT    NOT NULL,
             DESCRIPTION           TEXT    NOT NULL
 );
+
+INSERT INTO CONTENT_TYPE VALUES (1,'Cuentos','Cuentos Clasicos');
 
     CREATE TABLE CONTENT_TYPE(
             ID INT PRIMARY KEY     NOT NULL, NAME TEXT NOT NULL,DESCRIPTION TEXT
@@ -76,6 +80,9 @@ INSERT INTO BOOK VALUES (1,'Cuentos de la Selva','Horacio Quiroga',1,'Kapeluz/No
 INSERT INTO BOOK VALUES (2,'Cuentos de Ultratumba','Edgar Allan Poe',1,1,NULL,1,1);
 INSERT INTO BOOK VALUES (3,'Cuentos de miedo para asustarse de veras','Varios',1,1,NULL,1,1);
 INSERT INTO BOOK VALUES (5,'La mejor luna','Liliana Bodoc','Norma',1,NULL,1,'CASA');
+INSERT INTO BOOK VALUES (6,'Piñatas','Isol','Libros álbum del eclipse',1,NULL,1,'CASA');
+
+
     CREATE TABLE CONTENT(
             ID INT PRIMARY KEY     NOT NULL,
             TITLE           TEXT    NOT NULL,
@@ -101,7 +108,7 @@ INSERT INTO CONTENT VALUES (12,'Barbara','María Teresa Andruetto', 2,'Terror',9
 INSERT INTO CONTENT VALUES (13,'Flores contra la muerte','Ana Maria Shua', 2,'Terror',9,3);
 INSERT INTO CONTENT VALUES (14,'Gato','Laura No', 2,'Terror',9,3);
 INSERT INTO CONTENT VALUES (15,'La mejor luna','Liliana Bodoc', 2,'Terror',9,5);
-
+INSERT INTO CONTENT VALUES (16,'Piñatas','Isol', 2,'Terror',9,6);
 
 
 

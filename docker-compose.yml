@@ -1,18 +1,19 @@
 services:
   db:
-    container_name: postgres
+    container_name: bookflixDB
     image: postgres
+    restart: always
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      PGDATA: /data/postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Ch4Ch1t417
+      POSTGRES_DB: postgres
+      PGDATA: /Program Files/PostgreSQL/16/data
     volumes:
-      - db:/data/postgres
+      - db:/Program Files/PostgreSQL/16/data
     ports:
       - "5332:5432"
     networks:
       - db
-    restart: unless-stopped
 
 networks:
   db:
@@ -20,6 +21,3 @@ networks:
 
 volumes:
   db:
-
-server:
-  port: 8081

@@ -16,6 +16,7 @@ import java.util.Optional;
 
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/v1/content")
 public class ContentController {
 
@@ -86,7 +87,6 @@ public class ContentController {
         Content updatedContent = new Content();
         setContent(updatedContent,request);
         contServ.updateContent(id,updatedContent);
-        System.out.println("Che, algo hice aca ${id}" + id);
         if (id.equals(null) || id.describeConstable().isEmpty()){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }

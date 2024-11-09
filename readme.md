@@ -9,11 +9,20 @@
  * MongoDB configuration is in resources/application.properties
  * enviroment configuration are in resources/.env
 
-## Spring Data JPA Guide 
+### Spring Data JPA Guide 
 * https://github.com/juanmacintas/tallerJPASpringData
 
-## Tools
+### Annotations and concepts 
 
+* Use of ResponseEntity
+* CRUD of Books
+* 
+
+## Tools
+* Table Plus for PostgresSQL Visualization
+* Docker
+* Postman
+* 
 ### Package
 https://start.spring.io/
  * Initializr generates spring boot project with just what you need to start quickly! [Spring Boot Maven Plugin Reference Guide](https://start.spring.io/)
